@@ -1,0 +1,47 @@
+{
+    "name": "ProfileBuddy SM Data Extractor",
+    "description": "Social Media Lead Generator and Data Extractor for Profile Buddy",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background/background.js"
+    },
+    "permissions": [
+        "downloads", 
+        "storage", 
+        "tabs",
+        "activeTab", 
+        "unlimitedStorage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://localhost:3000/smdashboard*",
+        "https://app.profilebuddy.io/smdashboard*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://localhost:3000/smdashboard*",
+                "https://app.profilebuddy.io/smdashboard*"
+            ],
+            "js": [
+                "content/listenToScrapeButtonClick.js",
+                "content/listenToDownloadButtonClick.js"
+            ]
+        }
+    ],
+    "icons": {
+        "32": "assets/icon32.png",
+        "64": "assets/icon64.png",
+        "128": "assets/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "32": "assets/icon32.png",
+            "64": "assets/icon64.png",
+            "128": "assets/icon128.png"
+        },
+        "default_title": "ProfileBuddy - SM Data Scraper",
+        "default_popup": "popup/popup.html"
+    }
+}
