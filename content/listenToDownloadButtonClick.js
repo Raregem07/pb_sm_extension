@@ -3,7 +3,7 @@ downloadButton = document.getElementById("downloadButton");
 downloadButton.addEventListener("click", async () => {
     
     chrome.storage.local.get("total_rows_processed", ({ total_rows_processed }) => {
-        csvContent = "data:text/csv;charset=utf-8,";
+        csvContent = "data:text/csv;charset=utf-8;";
         /* + total_rows_processed.map(row => {
             return (row.title!=="undefined"?row.title:" " + "," + row.email!=="undefined"?row.email:" " + "," + row.profile_url!=="undefined"?row.profile_url:" " + "\r\n");  
         }); */
@@ -25,6 +25,8 @@ downloadButton.addEventListener("click", async () => {
     
         link.click(); // This will download the data file named "sm_extracted_data.csv".
         chrome.storage.local.set({total_rows_processed: []});
+        processed_rows = 0;
+        chrome.storage.local.set({ processed_rows });
         document.getElementById("scraped_total_count").innerText = "0";
     });
 
