@@ -1,6 +1,6 @@
 {
     "name": "ProfileBuddy SM Data Extractor",
-    "description": "Social Media Lead Generator and Data Extractor for Profile Buddy",
+    "description": "Social Media Leads Generator and Data Extractor for Profile Buddy",
     "version": "1.0.0",
     "manifest_version": 3,
     "background": {

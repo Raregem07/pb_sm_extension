@@ -1,0 +1,9 @@
+FOR DEPLOYMENT
+
+- Make sure that the two-> tab.url.includes("https://app.profilebuddy.io/smdashboard") 
+  are uncommented in background/background.js lines 13 and 22
+
+
+
+
+  
