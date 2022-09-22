@@ -16,13 +16,15 @@
     ],
     "host_permissions": [
         "https://localhost:3000/smdashboard*",
-        "https://app.profilebuddy.io/smdashboard*"
+        "https://app.profilebuddy.io/smdashboard*",
+        "https://www.google.com/search?*"
     ],
     "content_scripts": [
         {
             "matches": [
                 "https://localhost:3000/smdashboard*",
-                "https://app.profilebuddy.io/smdashboard*"
+                "https://app.profilebuddy.io/smdashboard*",
+                "https://www.google.com/search?*"
             ],
             "js": [
                 "content/listenToScrapeButtonClick.js",

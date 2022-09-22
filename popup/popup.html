@@ -7,14 +7,29 @@
     <title>Document</title>
 </head>
 <body style="width: 400px">
-    <div id="content">
+    <div id="content" style="display: block;">
         <h2>SM Data Scraper for ProfileBuddy</h2>
         <p>Total data rows scraped: <span id="scraped_count">0</span></p>
         <div style="display: flex; flex-direction: row;">
-            <button id="scrapeBtn" style="padding: 15px;">SCRAPE</button>
-            <button id="downloadBtn" style="padding: 15px;">DOWNLOAD</button>
+            <button id="scrapeBtn" style="padding: 10px; margin: 5px;">SCRAPE</button>
+            <button id="downloadBtn" style="padding: 10px; margin: 5px;">DOWNLOAD</button>
         </div>
-        <p id="hello"></p>
+        <p id="err_msg"></p>
+    </div>
+    <div id="scrape_err" style="display:none;">
+        <h2>Scrape Error:</h2>
+        <p>Can't execute scrape process for this page.</p>
+        <button id="okScrapeButton" style="padding: 15px;">OK</button>
+    </div>
+    <div id="download_err" style="display:none;">
+        <h2>Download Error:</h2>
+        <p>Can't execute download process for this page.</p>
+        <button id="okDownloadButton" style="padding: 15px;">OK</button>
+    </div>
+    <div id="onlyworks_err" style="display:none;">
+        <h2>Sorry!!!</h2>
+        <p>This extension only works in ProfileBuddy app.</p>
+        <button id="okOnlyworksButton" style="padding: 15px;">OK</button>
     </div>
     <script src="popup.js"></script>
 </body>
